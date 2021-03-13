@@ -1,0 +1,31 @@
+[build-system]
+requires = ["flit_core >=2,<3"]
+build-backend = "flit_core.buildapi"
+
+[tool.flit.metadata]
+module = "webcam"
+author = "Stephen Roille"
+author-email = "stephen.roille@gmail.com"
+home-page = "https://github.com/StephenRoille/project-94544842a8"
+description-file = "README.md"
+# https://pypi.org/classifiers/
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: GNU Lesser General Public License v3 or later (LGPLv3+)",
+  "Operating System :: OS Independent",
+]
+keywords = "KEYWORDS"
+requires-python = ">=3.6"
+requires = [
+  "flask~=1.1",
+  "imutils~=0.5",
+  "numpy~=1.19",
+  "opencv-contrib-python~=4.5",
+]
+
+[tool.flit.metadata.requires-extra]
+test = []
+doc = []
+
+[tool.flit.scripts]
+start_webcam_app = "webcam.__main__:start_app"
